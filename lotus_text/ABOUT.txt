@@ -1,0 +1,37 @@
+How to use LotusText library.
+
+----------------------------------------
+LotusTextLoadGraphics
+
+Copy nametable and attribute data into the ppu at nametable #0. Must be called
+while display is disabled; call takes too much time to run during a single
+vblank. After this call, changes to the nametable may be made to add decoration
+to the rest of the screen.
+
+----------------------------------------
+LotusTextLoadPalette
+
+Assign colors to background palette 0, 1, 2 and sprite palette 0. Other palettes
+are unused.
+
+----------------------------------------
+LotusTextInit
+
+Initialize state of the LotusText. Must be called before any calls to
+LotusTextUpdate.
+
+----------------------------------------
+LotusTextUpdate
+
+Call with A set to the current state of the user's controller. Call once per
+frame. Updates LotusText's state, and determines which leaves, if any, to
+highlight. Uses sprites at $2f8 and $2fc to show selected symbols. After
+calling this function, carry flag is set if and only if the user pressed
+start button. In this case, A contains the length of the string the user
+entered, and the string itself is available starting at address $700.
+
+----------------------------------------
+LotusTextDuringVblank
+
+Call during vblank. Applies attribute changes to the ppu in order to highlight
+leaves.
