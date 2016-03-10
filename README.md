@@ -1,11 +1,16 @@
-# demo_lotus.nes
+# lotus.nes
 
-This is a demo ROM that shows how to use the LotusText library.
+Experimental, alternative text input for the NES, using the LotusText library.
 
 
 # Download
 
-http://dustmop.io/dat/demo_lotus.nes
+http://dustmop.io/dat/lotus.nes
+
+
+# About
+
+http://www.dustmop.io/blog/2016/03/10/lotus-text/
 
 
 # Building
