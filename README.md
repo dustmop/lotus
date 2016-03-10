@@ -2,6 +2,8 @@
 
 Experimental, alternative text input for the NES, using the LotusText library.
 
+![Hello LotusText](/dustmop/lotus/img/lotus-hello.gif?raw=true)
+
 
 # Download
 
